@@ -9,7 +9,7 @@ services:
     deploy:
       replicas: 3
 
-   ml:
+  ml:
     image: saivardhan53/mlrepo:latest
     ports:
       - "81:80"
@@ -18,7 +18,7 @@ services:
     deploy:
       replicas: 3
 
-   ds:
+  ds:
     image: saivardhan53/dsrepo:latest
     ports:
       - "82:80"
@@ -27,7 +27,7 @@ services:
     deploy:
       replicas: 3
 
-   it:
+  it:
     image: saivardhan53/itrepo:latest
     ports:
       - "83:80"
@@ -35,4 +35,3 @@ services:
       - "itvolume"
     deploy:
       replicas: 3
-
