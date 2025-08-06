@@ -5,7 +5,7 @@ services:
     ports:
       - "80:80"
     volumes:
-      - "aivolume"
+      - aivolume:/app
     deploy:
       replicas: 3
 
@@ -14,7 +14,7 @@ services:
     ports:
       - "81:80"
     volumes:
-      - "mlvolume"
+      - mlvolume:/app
     deploy:
       replicas: 3
 
@@ -23,7 +23,7 @@ services:
     ports:
       - "82:80"
     volumes:
-      - "dsvolume"
+      - dsvolume:/app
     deploy:
       replicas: 3
 
@@ -32,6 +32,12 @@ services:
     ports:
       - "83:80"
     volumes:
-      - "itvolume"
+      - itvolume:/app
     deploy:
       replicas: 3
+
+volumes:
+  aivolume:
+  mlvolume:
+  dsvolume:
+  itvolume:
